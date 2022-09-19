@@ -38,13 +38,19 @@ export default class Paginator {
             pagePosition++;
             pageCount++;
         }
-        /*
-        if (pagePosition + pageSize >= listSize) {
+
+        if (this.selectedPageNumber < this.maxPages) {
             this.container.append(
-                this.renderPageLink("Next&nbsp;>>", pagePosition, pageSize)
+                $("<a>", {"href": ""})
+                    .append("Next&nbsp;>>")
+                    .on("click", (event) => {
+                        this.selectedPageNumber++;
+                        this.update();
+                        this.action(this.selectedPageNumber);
+                        return false;
+                    })
             );
         }
-         */
     }
 
     /**
