@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="/js/bundle.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="page-container" id="loginPage">
+    <div class="align-container">
+        <div class="content-container">
+            <img src="/assets/Logo.svg" class="logo">
+            <div class="promt-group">
+                <h2>Welcome to the Learning Management System</h2>
+                Please, log in to continue
+            </div>
+            <div class="input-group">
+                <img src="/assets/password.svg" style="height: 40px;">
+                <input type="text" class="text-input" name="login" id="loginInput" class="" placeholder="Username">
+            </div>
+            <div class="input-group">
+                <img src="/assets/user.svg" style="height: 40px;">
+                <input type="password" class="text-input" name="pass" id="passInput" class="" placeholder="Password">
+            </div>
+            <div class="input-group checkbox-group">
+                <input type="checkbox" name="remember" id="rememberCheckbox" class="form-check-input">
+                <label class="form-check-label" for="rememberCheckbox" class="form-check-label">Remember me</label>
+            </div>
+            <div class="error-msg" id="error"></div>
+            <div class="input-group">
+                <button type="submit" class="login-button" id="loginButton">Log in</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-container" id="userListPage">
+    <div class="align-container">
+        <div class="content-container">
+            <h1>UserList</h1>
+            <table class="table table-striped userTable">
+            </table>
+            <div class="paginationLine">
+            </div>
+            <div class="logout-block">
+                <a type="submit" id="logoutButton">Log Out</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
