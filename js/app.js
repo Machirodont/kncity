@@ -54,8 +54,9 @@ function showLoginPage() {
 
 function showUserListPage() {
     $("#loginPage").hide();
-    $("#userListPage").show();
+    paginator.selectedPageNumber = 1;
     refreshUserList(1);
+    $("#userListPage").show();
 }
 
 function showLoginError() {
@@ -81,6 +82,7 @@ function refreshUserList(pageNumber) {
                 showLoginPage();
             } else {
                 studentsTable.update(data.students);
+
                 paginator.maxPages = Math.ceil(data.studentsCount / pageSize);
                 paginator.update();
             }
